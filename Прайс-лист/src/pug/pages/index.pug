@@ -1,24 +1,152 @@
 extends ../layout/base
 
 block content 
-    .container
-        p.container__title Всё про вёрстку
-        p.container__text Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum, pariatur! Error repudiandae eaque in qui, recusandae id illo dolorum doloremque et nobis alias animi, accusantium ipsam repellat, sed consequuntur neque?In atque vel accusamus non corrupti nisi id assumenda! Ducimus optio recusandae, quaerat tempore non perspiciatis autem repudiandae, obcaecati ad accusamus fuga id corrupti nam, quis laudantium dignissimos nemo harum.Qui adipisci, perferendis laudantium pariatur eius maxime deleniti architecto? Libero fugit repellendus aspernatur sunt ipsam debitis alias tempora harum adipisci nam porro tenetur quaerat nesciunt, eius nemo sint molestias inventore!Neque ipsa rem ducimus deleniti. Minus magnam, cupiditate ad dolore ratione quasi eos nesciunt tempore voluptas. Quibusdam et rerum, ut incidunt accusantium, libero reprehenderit sed illum nobis magni culpa natus.
-
-    .container
-        p.container__title Всё про мобильные приложения
-        p.container__text Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum, pariatur! Error repudiandae eaque in qui, recusandae id illo dolorum doloremque et nobis alias animi, accusantium ipsam repellat, sed consequuntur neque?In atque vel accusamus non corrupti nisi id assumenda! Ducimus optio recusandae, quaerat tempore non perspiciatis autem repudiandae, obcaecati ad accusamus fuga id corrupti nam, quis laudantium dignissimos nemo harum.Qui adipisci, perferendis laudantium pariatur eius maxime deleniti architecto? Libero fugit repellendus aspernatur sunt ipsam debitis alias tempora harum adipisci nam porro tenetur quaerat nesciunt, eius nemo sint molestias inventore!Neque ipsa rem ducimus deleniti. Minus magnam, cupiditate ad dolore ratione quasi eos nesciunt tempore voluptas. Quibusdam et rerum, ut incidunt accusantium, libero reprehenderit sed illum nobis magni culpa natus.
-
-    .container
-        p.container__title Всё про JS
-        p.container__text Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum, pariatur! Error repudiandae eaque in qui, recusandae id illo dolorum doloremque et nobis alias animi, accusantium ipsam repellat, sed consequuntur neque?In atque vel accusamus non corrupti nisi id assumenda! Ducimus optio recusandae, quaerat tempore non perspiciatis autem repudiandae, obcaecati ad accusamus fuga id corrupti nam, quis laudantium dignissimos nemo harum.Qui adipisci, perferendis laudantium pariatur eius maxime deleniti architecto? Libero fugit repellendus aspernatur sunt ipsam debitis alias tempora harum adipisci nam porro tenetur quaerat nesciunt, eius nemo sint molestias inventore!Neque ipsa rem ducimus deleniti. Minus magnam, cupiditate ad dolore ratione quasi eos nesciunt tempore voluptas. Quibusdam et rerum, ut incidunt accusantium, libero reprehenderit sed illum nobis magni culpa natus.
-
-    .container
-        p.container__title Всё про веб-приложения
-        p.container__text Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum, pariatur! Error repudiandae eaque in qui, recusandae id illo dolorum doloremque et nobis alias animi, accusantium ipsam repellat, sed consequuntur neque?In atque vel accusamus non corrupti nisi id assumenda! Ducimus optio recusandae, quaerat tempore non perspiciatis autem repudiandae, obcaecati ad accusamus fuga id corrupti nam, quis laudantium dignissimos nemo harum.Qui adipisci, perferendis laudantium pariatur eius maxime deleniti architecto? Libero fugit repellendus aspernatur sunt ipsam debitis alias tempora harum adipisci nam porro tenetur quaerat nesciunt, eius nemo sint molestias inventore!Neque ipsa rem ducimus deleniti. Minus magnam, cupiditate ad dolore ratione quasi eos nesciunt tempore voluptas. Quibusdam et rerum, ut incidunt accusantium, libero reprehenderit sed illum nobis magni culpa natus.
-
-    .section 
-        p.section__title Другой заголовок
-        p.section__text Много разного текста Много разного текста Много разного текста Много разного текста Много разного текста Много разного текста Много разного текста Много разного текста Много разного текста Много разного текста Много разного текста Много разного текста Много разного текста Много разного текста
-        
-        
+    article.price-list 
+        .price-list__container 
+            .price-list__card.card 
+                .card__img 
+                    img(src="../src/static/img/card-img.jpg", class="card__pic")
+                p.card__name Фанера ФК березовая (вторая строка)
+                .card__characteristic 
+                    span.card__characteristic-text Размер:
+                    span.card__characteristic-value 3х1525х1525мм
+                .card__characteristic 
+                    span.card__characteristic-text Сорт:
+                    span.card__characteristic-value IV/IV НШ
+                p.card__in-stock <span class="card__in-stock-value">523</span> шт. на складе
+                .card__bottom
+                    .card__price
+                        span.card__price-val <span class="card__price-num">1098</span> р
+                        span.card__price-per-one за 1 шт 
+                    .card__counter-block 
+                        .card__counter 
+                            a(class="card__minus-btn") -
+                            input(type="number", class="card__field")
+                            a(class="card__plus-btn") +
+                        .card__shop-basket
+                    a(href="#", class="card__clarify-remainder") уточнить остаток
+            .price-list__card.card 
+                .card__img 
+                    img(src="../src/static/img/card-img.jpg", class="card__pic")
+                p.card__name Фанера ФК березовая (вторая строка)
+                .card__characteristic 
+                    span.card__characteristic-text Размер:
+                    span.card__characteristic-value 3х1525х1525мм
+                .card__characteristic 
+                    span.card__characteristic-text Сорт:
+                    span.card__characteristic-value IV/IV НШ
+                p.card__in-stock <span class="card__in-stock-value">523</span> шт. на складе
+                .card__bottom
+                    .card__price
+                        span.card__price-val <span class="card__price-num">1098</span> р
+                        span.card__price-per-one за 1 шт 
+                    .card__counter-block 
+                        .card__counter 
+                            a(class="card__minus-btn") -
+                            input(type="number", class="card__field")
+                            a(class="card__plus-btn") +
+                        .card__shop-basket
+                    a(href="#", class="card__clarify-remainder") уточнить остаток
+            .price-list__card.card 
+                .card__img 
+                    img(src="../src/static/img/card-img.jpg", class="card__pic")
+                p.card__name Фанера ФК березовая (вторая строка)
+                .card__characteristic 
+                    span.card__characteristic-text Размер:
+                    span.card__characteristic-value 3х1525х1525мм
+                .card__characteristic 
+                    span.card__characteristic-text Сорт:
+                    span.card__characteristic-value IV/IV НШ
+                p.card__in-stock <span class="card__in-stock-value">523</span> шт. на складе
+                .card__bottom
+                    .card__price
+                        span.card__price-val <span class="card__price-num">1098</span> р
+                        span.card__price-per-one за 1 шт 
+                    .card__counter-block 
+                        .card__counter 
+                            a(class="card__minus-btn") -
+                            input(type="number", class="card__field")
+                            a(class="card__plus-btn") +
+                        .card__shop-basket
+                    a(href="#", class="card__clarify-remainder") уточнить остаток
+            .price-list__card.card 
+                .card__img 
+                    img(src="../src/static/img/card-img.jpg", class="card__pic")
+                p.card__name Фанера ФК березовая (вторая строка)
+                .card__characteristic 
+                    span.card__characteristic-text Размер:
+                    span.card__characteristic-value 3х1525х1525мм
+                .card__characteristic 
+                    span.card__characteristic-text Сорт:
+                    span.card__characteristic-value IV/IV НШ
+                p.card__in-stock <span class="card__in-stock-value">523</span> шт. на складе
+                .card__bottom
+                    .card__price
+                        span.card__price-val <span class="card__price-num">1098</span> р
+                        span.card__price-per-one за 1 шт 
+                    .card__counter-block 
+                        .card__counter 
+                            a(class="card__minus-btn") -
+                            input(type="number", class="card__field")
+                            a(class="card__plus-btn") +
+                        .card__shop-basket
+                    a(href="#", class="card__clarify-remainder") уточнить остаток
+            .price-list__card.card 
+                .card__img 
+                    img(src="../src/static/img/card-img.jpg", class="card__pic")
+                p.card__name Фанера ФК березовая (вторая строка)
+                .card__characteristic 
+                    span.card__characteristic-text Размер:
+                    span.card__characteristic-value 3х1525х1525мм
+                .card__characteristic 
+                    span.card__characteristic-text Сорт:
+                    span.card__characteristic-value IV/IV НШ
+                p.card__in-stock <span class="card__in-stock-value">523</span> шт. на складе
+                .card__bottom
+                    .card__price
+                        span.card__price-val <span class="card__price-num">1098</span> р
+                        span.card__price-per-one за 1 шт 
+                    .card__counter-block 
+                        .card__counter 
+                            a(class="card__minus-btn") -
+                            input(type="number", class="card__field")
+                            a(class="card__plus-btn") +
+                        .card__shop-basket
+            .price-list__card.card 
+                .card__img 
+                    img(src="../src/static/img/card-img.jpg", class="card__pic")
+                p.card__name Фанера ФК березовая (вторая строка)
+                .card__characteristic 
+                    span.card__characteristic-text Размер:
+                    span.card__characteristic-value 3х1525х1525мм
+                .card__characteristic 
+                    span.card__characteristic-text Сорт:
+                    span.card__characteristic-value IV/IV НШ
+                .card__bottom
+                    .card__price
+                        span.card__price-val <span class="card__price-num">1098</span> р
+                        span.card__price-per-one за 1 шт 
+                    .card__counter-block 
+                    a(href="#", class="card__clarify-remainder") уточнить остаток
+            .price-list__card.card 
+                .card__img 
+                    img(src="../src/static/img/card-img.jpg", class="card__pic")
+                p.card__name Фанера ФК березовая (вторая строка)
+                .card__characteristic 
+                    span.card__characteristic-text Размер:
+                    span.card__characteristic-value 3х1525х1525мм
+                .card__characteristic 
+                    span.card__characteristic-text Сорт:
+                    span.card__characteristic-value IV/IV НШ
+                p.card__in-stock <span class="card__in-stock-value">523</span> шт. на складе
+                .card__bottom
+                    .card__price
+                        span.card__price-val <span class="card__price-num">1098</span> р
+                        span.card__price-per-one за 1 шт 
+                    .card__counter-block 
+                        .card__counter 
+                            a(class="card__minus-btn") -
+                            input(type="number", class="card__field")
+                            a(class="card__plus-btn") +
+                        .card__shop-basket
+                    a(href="#", class="card__clarify-remainder") уточнить остаток
