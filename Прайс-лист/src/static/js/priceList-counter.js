@@ -23,8 +23,6 @@ if (document.querySelector('.price-list')) {
     contentBlock.addEventListener('input', e => {
         if (e.target.classList.contains('card__field')) {
             e.target.parentElement.nextElementSibling.classList.add('change-position'); 
-            let el = e.target.ownerDocument;
-            console.log(el.childNodes);
         } 
     })
 }
