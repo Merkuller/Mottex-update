@@ -18,6 +18,10 @@ body
     color: #010101
     overflow: hidden
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button 
+    -webkit-appearance: none
+
 .price-list
     max-width: 711px
 
@@ -33,14 +37,32 @@ body
             padding: 10px
             margin-bottom: 30px
             border: 1px solid #E3E3E3
+            cursor: pointer
             &:not(&:nth-of-type(3n+3))
                 margin-right: 30px
+            &:hover
+                  .card__shop-basket
+                        left: 125px
+                        width: 43px
+                        font-size: 0
+            @media screen and ( max-width: 710px)
+                  flex-direction: row
+                  flex-basis: 46%
+                  margin: 2%
+                  min-height: 300px
+                  &:not(&:nth-of-type(3n+3))
+                        margin-right: 2%
+            @media screen and ( max-width: 653px)
+                  flex-basis: 100%
+                  min-height: auto
 
 .card
 		&__img
             position: relative
             height: 197px
             margin-bottom: 10px
+            @media screen and ( max-width: 710px)
+                  display: none
 		&__pic
             position: absolute
             top: 0
@@ -72,6 +94,7 @@ body
 		&__characteristic-text
             color: #919191
             display: block
+            font-size: 12px
 		&__characteristic-value
             font-size: 14px
             line-height: 21px
@@ -84,6 +107,7 @@ body
             color: #16C861
             display: flex
             align-items: center
+            margin-top: 8px
             margin-bottom: 8px
             &::before
                 content: ''
@@ -124,6 +148,7 @@ body
             background: #E3E3E3
 		&__counter-block
             display: flex
+            position: relative
 		&__counter
             position: relative
             width: 120px
@@ -142,7 +167,7 @@ body
             width: 100%
             height: 100%
             border: none
-            padding-left: 44px
+            text-align: center
             font-weight: bold
             font-size: 14px
             line-height: 14px
@@ -158,19 +183,66 @@ body
             transform: translateY(-50%)
             font-size: 24px
 		&__shop-basket
-
+                  display: flex
+                  font-weight: bold
+                  padding-left: 40px
+                  font-size: 14px
+                  line-height: 21px
+                  align-items: center
+                  width: 131px
+                  height: 43px
+                  background: #20A8B5
+                  position: absolute
+                  left: 0
+                  text-transform: uppercase
+                  color: #FFFFFF
+                  transition: all .3s
+                  @media screen and ( max-width: 768px)
+                        left: 125px
+                        width: 43px
+                        font-size: 0
+                  &::before
+                        content: ''
+                        width: 21px
+                        height: 21px
+                        background-image: url('img/svg/shop-basket-icon.svg')
+                        background-position: center
+                        display: inline-block
+                        position: absolute
+                        left: 10px
 		&__clarify-remainder
-            max-width: 169px
-            font-size: 14px
-            line-height: 21px
-            padding: 10px
-            color: #FFFFFF
-            display: inline-block
-            background: #20A8B5
-            border: 1px solid #20A8B5
-            text-decoration: none
-            text-transform: uppercase
+                  font-size: 14px
+                  line-height: 21px
+                  padding: 10px
+                  color: #FFFFFF
+                  display: inline-block
+                  white-space: nowrap
+                  background: #20A8B5
+                  border: 1px solid #20A8B5
+                  font-weight: bold
+                  text-decoration: none
+                  text-transform: uppercase
+                  @media screen and ( max-width: 425px)
+                        max-width: auto
+                        padding: 10px
+                        text-align: center
 
+.card
+		&__mobile-img
+                  display: none
+                  @media screen and ( max-width: 710px)
+                        flex: 0 0 100px
+                        height: 100px
+                        display: block
+                        position: relative
+
+.card
+		&__body
+                  display: flex
+                  height: 100%
+                  flex-direction: column
+                  @media screen and ( max-width: 710px)
+                        padding-left: 10px
 
 
 
