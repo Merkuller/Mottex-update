@@ -5,7 +5,7 @@ block variables
         let n = 0;
         let cardsQuantity = 6;
 
-block content
+block mixins
     mixin card
         .price-list__card.card
             .card__mobile-img
@@ -32,6 +32,8 @@ block content
                             a(href="#", class="card__plus-btn") +
                         .card__shop-basket в корзину
                     a(href="#", class="card__clarify-remainder") уточнить остаток
+
+block content
     article.price-list 
         .price-list__container
             while n < cardsQuantity
