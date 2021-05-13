@@ -30,4 +30,5 @@ if (document.querySelector('.price-list')) {
             e.target.value === '' || e.target.value === '0' ? e.target.previousElementSibling.style.pointerEvents = 'none' : e.target.previousElementSibling.style.pointerEvents = 'auto';
         }  
     })
+    
 }
