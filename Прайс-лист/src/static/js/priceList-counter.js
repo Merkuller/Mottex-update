@@ -10,9 +10,7 @@ if (document.querySelector('.price-list')) {
             e.preventDefault();
             let field = e.target.parentElement.querySelector('.card__field');
             field.parentElement.querySelector('.card__minus-btn').style.pointerEvents = 'auto';
-            let shopBasketEl = field.parentElement.nextElementSibling;
             field.value ++;
-            shopBasketEl.classList.add('change-position');
         } 
         if (e.target.classList.contains('card__minus-btn')) {
             e.preventDefault();
@@ -22,10 +20,13 @@ if (document.querySelector('.price-list')) {
         }
     })
 
-    contentBlock.addEventListener('input', e => {
-        if (e.target.classList.contains('card__field')) {
-            e.target.parentElement.nextElementSibling.classList.add('change-position'); 
+    contentBlock.addEventListener('click', e => {
+        if (e.target.classList.contains('card__shop-basket')) {
+            e.target.classList.add('change-position'); 
         }
+    })
+
+    contentBlock.addEventListener('input', e => {
         if (e.target.classList.contains('card__field')) {
             e.target.value === '' || e.target.value === '0' ? e.target.previousElementSibling.style.pointerEvents = 'none' : e.target.previousElementSibling.style.pointerEvents = 'auto';
         }  
